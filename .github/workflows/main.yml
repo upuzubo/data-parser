@@ -1,0 +1,22 @@
+name: Data Parser Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Print message
+        run: echo "Data parser workflow started"
+
+      - name: Build data parser
+        run: |
+          echo "Building data parser..."
+          # Add build command here
